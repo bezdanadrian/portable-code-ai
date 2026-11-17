@@ -44,6 +44,10 @@ prompt feldolgozása plusz idő. Hosszú kód vagy gyengébb gép lassabb lehet.
 Az iskolai célgépen még szükséges mérés. Céges/sulis futtatási korlátozásokat
 nem kerül meg, és nem ígér minden régi processzoron kompatibilitást.
 
+A helyi névlistás próba 54,7 másodperc alatt adott leforduló, négy bemeneti
+teszten átment megoldást; a stíluselőírásokat nem mind tartotta be.
+A mérés gépe és korlátai: [BENCHMARK.md](BENCHMARK.md).
+
 Ismételhető névlistás sebességpróba az USB mappájából:
 
 ```powershell

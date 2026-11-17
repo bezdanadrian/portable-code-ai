@@ -1,6 +1,6 @@
-Write a complete C# console Program.cs for this school exercise. Use File.ReadAllLines, foreach loops and static helper methods, no LINQ. Read nevek.txt; each nonblank line has whitespace-separated name, gender and frequency. The gender fields are literally "férfi" and "nő". Print male count, female count, shortest male name and the number of male names of length 3. Handle an empty file and no male names. Assume the file exists. Keep the solution compact, ideally below 80 lines. Output code only.
-Example input:
+Írj teljes, fordítható C# konzolos Program.cs fájlt. File.ReadAllLines, foreach ciklusok és külön statikus segédmetódusok használhatók, LINQ nem. A nevek.txt fájl minden nem üres sorában név, nem és gyakoriság található, szóközökkel vagy tabokkal elválasztva. A nem értéke "férfi" vagy "nő". Írd ki a férfiak és nők számát, a legrövidebb férfinevet és a hárombetűs férfinevek számát. Kezeld az üres fájlt, a több szóközt, a hiányos sorokat és azt is, ha nincs férfinév. A fájl létezését feltételezheted. Legyen tömör, lehetőleg 80 sor alatti megoldás. Csak a teljes kódot kérem, a szükséges using sorokkal, magyarázat nélkül.
+Példa:
 Adam férfi ritka
 Eva nő ritka
 Pal férfi ritka
-Expected: 2 males, 1 female, shortest male Pal, one male name of length 3.
+Elvárt: 2 férfi, 1 nő; a legrövidebb férfinév Pal; hárombetűs férfinév 1.
