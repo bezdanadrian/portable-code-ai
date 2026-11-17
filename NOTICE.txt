@@ -1,0 +1,6 @@
+Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT, Copyright (c) Alibaba Cloud. All Rights Reserved.
+
+The notice above applies to Qwen2.5-Coder-3B-Instruct-GGUF.
+Qwen2.5-Coder-7B-Instruct-GGUF is provided under Apache License 2.0.
+llama.cpp is provided under the MIT License.
+See licenses/ for the original license texts.

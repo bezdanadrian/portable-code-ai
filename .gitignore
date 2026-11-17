@@ -1,0 +1,11 @@
+/models/
+/runtime/
+/logs/
+/beszelgetesek/
+/projects/
+/licenses/
+*.gguf
+*.part
+*.zip
+/test-results/
+/proba.py
