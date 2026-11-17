@@ -1,10 +1,14 @@
-param([ValidateSet('auto','3','7')][string]$Model='auto', [switch]$SmokeTest)
+param([ValidateSet('auto','3','7')][string]$Model='auto', [switch]$SmokeTest, [string]$PromptFile)
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 $root = $PSScriptRoot
 . (Join-Path $root 'Streaming.ps1')
 $server = $null
 try {
+    if ($PromptFile) {
+        $testPrompt = [IO.File]::ReadAllText((Resolve-Path -LiteralPath $PromptFile).Path)
+        $SmokeTest = $true
+    }
     $os = Get-CimInstance Win32_OperatingSystem
     $freeGB = $os.FreePhysicalMemory / 1MB
     if ($Model -eq 'auto') {
@@ -47,7 +51,10 @@ try {
     $pending = ''
     Write-Host '/fajl teljes-utvonal | /tobbsor (vege: /vege) | /ujbeszelgetes | /mentes | /kilepes'
     while ($true) {
-        if ($SmokeTest) { $inputText = 'Write a Python function add(a,b) that returns their sum. Only code.' }
+        if ($SmokeTest) {
+            $inputText = 'Write a Python function add(a,b) that returns their sum. Only code.'
+            if ($PromptFile) { $inputText = $testPrompt }
+        }
         else { $inputText = Read-Host 'Te' }
         if ($null -eq $inputText -or $inputText -eq '/kilepes') { break }
         if ($inputText -eq '/ujbeszelgetes') { $history.Clear(); [void]$history.Add(@{role='system';content=$system}); $pending=''; continue }

@@ -44,6 +44,16 @@ prompt feldolgozása plusz idő. Hosszú kód vagy gyengébb gép lassabb lehet.
 Az iskolai célgépen még szükséges mérés. Céges/sulis futtatási korlátozásokat
 nem kerül meg, és nem ígér minden régi processzoron kompatibilitást.
 
+Ismételhető névlistás sebességpróba az USB mappájából:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Chat.ps1 -Model 3 -PromptFile .\benchmark-prompt.txt
+```
+
+A kiírt válaszidő tartalmazza a prompt feldolgozását és a válasz generálását,
+de a modell előzetes betöltését nem. A gyors válasz önmagában nem bizonyítja,
+hogy a megoldás helyes: a kódot a példabemenettel és üres fájllal is ellenőrizni kell.
+
 ## Licencek
 
 - **A 3B modell Qwen Research License alatt áll:** alapból nem kereskedelmi

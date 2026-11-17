@@ -5,7 +5,7 @@ $Destination=[IO.Path]::GetFullPath($Destination)
 if ($Destination.TrimEnd('\') -eq [IO.Path]::GetPathRoot($Destination).TrimEnd('\')) { throw 'Meghajto gyokere helyett kulon celmappat adj meg.' }
 [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
 New-Item -ItemType Directory -Force -Path $Destination,"$Destination\models","$Destination\runtime","$Destination\licenses","$Destination\projects" | Out-Null
-foreach ($f in @('START.bat','Chat.ps1','Streaming.ps1','README-HU.txt','NOTICE.txt','school-profile.txt','TANANYAG.md')) { Copy-Item -LiteralPath (Join-Path $PSScriptRoot $f) -Destination $Destination }
+foreach ($f in @('START.bat','Chat.ps1','Streaming.ps1','README.md','README-HU.txt','NOTICE.txt','school-profile.txt','TANANYAG.md','benchmark-prompt.txt')) { Copy-Item -LiteralPath (Join-Path $PSScriptRoot $f) -Destination $Destination }
 $zip="$Destination\runtime\llama-b11476.zip"
 & curl.exe -L --fail --retry 5 -C - -o $zip 'https://github.com/ggml-org/llama.cpp/releases/download/b11476/llama-b11476-bin-win-cpu-x64.zip'
 if ($LASTEXITCODE) { throw 'Runtime letoltes sikertelen' }

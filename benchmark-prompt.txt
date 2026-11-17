@@ -1,0 +1,6 @@
+Write a complete C# console Program.cs for this school exercise. Use File.ReadAllLines, foreach loops and static helper methods, no LINQ. Read nevek.txt; each nonblank line has whitespace-separated name, gender and frequency. The gender fields are literally "férfi" and "nő". Print male count, female count, shortest male name and the number of male names of length 3. Handle an empty file and no male names. Assume the file exists. Keep the solution compact, ideally below 80 lines. Output code only.
+Example input:
+Adam férfi ritka
+Eva nő ritka
+Pal férfi ritka
+Expected: 2 males, 1 female, shortest male Pal, one male name of length 3.
